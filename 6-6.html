@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        .colorC {
+            color: green;
+        }
+        .colorI {
+            color: red;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var fpass = document.getElementById("pass1");
+            a = fpass.value;
+            var spass = document.getElementById("pass2");
+            b = spass.value;
+            var rs = document.getElementById("errormsg");
+            if(a == b){
+                rs.innerHTML = "Correct";
+                rs.className = "colorC";
+                
+            }else{
+                rs.innerHTML = "Incorrect";
+                rs.className = "colorI";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Register</h1>
+    Username: <input type="text"><br>
+    Password: <input type="text" id="pass1"><br>
+    Re-type Password: <input type="text" id="pass2"><br>
+    <input type="submit" onclick="checkPassword()">
+    <div id="errormsg"></div>
+</body>
+
+</html>
